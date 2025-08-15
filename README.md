@@ -16,5 +16,3 @@ Easily add, complete, and delete tasks with a simple and responsive interface.
 - **HTML5** – structure  
 - **CSS3** – styling  
 - **JavaScript** – functionality
-
-
