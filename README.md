@@ -17,5 +17,4 @@ Easily add, complete, and delete tasks with a simple and responsive interface.
 - **CSS3** – styling  
 - **JavaScript** – functionality
 
-##Author 
-Tanya Chauhan
+
