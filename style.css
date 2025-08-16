@@ -1,7 +1,7 @@
 body{
     text-align: center;
-    background-color: rgb(2, 2, 29);
-    color: white;
+    background-color: lavenderblush;
+    color: rgb(165, 54, 73)
     
 }
 
@@ -11,7 +11,7 @@ body{
     height: auto;
     width: 50vh;
     border: solid 0.5px black ;
-    background-color: orange;
+    background-color: rgb(100, 65, 100);
     border-radius: 5px;
 
 
@@ -36,8 +36,57 @@ border-radius: 5px;
     padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: green;
+    background-color: rgb(231, 150, 200);
     color: white;
-    border-radius: 5px;
     
+    border-radius: 5px;
+    cursor: pointer;
+    
+     border-color:  rgb(105, 21, 60);
+    
+}
+
+#addbutton:hover{
+    color: rgb(105, 21, 60);
+    
+}
+
+
+ul{
+   
+    color:  rgb(231, 150, 200);
+    
+
+}
+
+#subheading{
+  
+    color:  rgb(231, 150, 200);
+}
+
+#deletebutton{
+    
+    
+    background-color:  rgb(231, 150, 200);
+     padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: white;
+    border-color:  rgb(105, 21, 60);
+    margin-bottom: 2px;
+;
+
+    
+}
+li{
+    display: flex;
+    justify-content: space-between;
+     padding-right: 12px; 
+  
+}
+
+#deletebutton:hover{
+ color:  rgb(105, 21, 60);
 }
