@@ -52,19 +52,13 @@ border-radius: 5px;
 }
 
 
-ul{
-   
-    color:  rgb(231, 150, 200);
-    
-
-}
 
 #subheading{
   
     color:  rgb(231, 150, 200);
 }
 
-#deletebutton{
+.deletebutton{
     
     
     background-color:  rgb(231, 150, 200);
@@ -80,13 +74,19 @@ ul{
 
     
 }
-li{
+.editli{
     display: flex;
     justify-content: space-between;
      padding-right: 12px; 
+     color:  rgb(231, 150, 200);
   
 }
 
-#deletebutton:hover{
+.deletebutton:hover{
  color:  rgb(105, 21, 60);
+}
+
+.completed{
+    text-decoration: line-through;
+    cursor: pointer;
 }

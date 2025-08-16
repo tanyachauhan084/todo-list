@@ -1,27 +1,57 @@
-let Inputarea= document.getElementById("Inputarea");
+document.addEventListener("DOMContentLoaded", function(){
+    let Inputarea= document.getElementById("Inputarea");
 let addbutton= document.getElementById("addbutton");
+let todolist= document.getElementById("Todo-list")
 
+let TaskList= JSON.parse(localStorage.getItem('Task')) ||[];
 
-TaskList= [];
-
-
- function todo(){
-    let inputt= Inputarea.value.trim();
-    if(inputt==""){
-        return;
-    }
+TaskList.forEach(task => rendertasks(task))
     
-    console.log(inputt);
-    inputt="";
 
- }
+addbutton.addEventListener("click", function (){
+    let input= Inputarea.value.trim();
+    if(input== ""){
+        return; //break
+    }
 
+   const newtask={
+    id: Date.now(),
+    text: input,
+    completed: false
 
- addbutton.addEventListener("click", todo)
+   }
 
- Inputarea.addEventListener("keydown", function(event){
-if(event.key== 'Enter'){
-    todo();
+   TaskList.push(newtask);
+   savetask();
+   console.log(newtask);
+    input="";
+})
+
+function rendertasks(task){
+let li= document.createElement('li');
+if(task.completed){
+    li.classList.add('completed');
 }
- })
+li.classList.add('editli')
+li.setAttribute("data-id", task.id);
+li.innerHTML= `<span>${task.text}</span>
+<button class="deletebutton">Delete</button>`;
+
+
+todolist.appendChild(li);
+
+li.addEventListener('click', function(event){
+if(event.target.classList.contains("deletebutton")){
+    return;
+}
+task.completed = ! task.completed
+li.classList.toggle('completed');
+})
+}
+
+function savetask(){
+    localStorage.setItem("Task",  JSON.stringify(TaskList));
+}
+})
+
 
