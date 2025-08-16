@@ -22,9 +22,10 @@ addbutton.addEventListener("click", function (){
    }
 
    TaskList.push(newtask);
+   rendertasks(newtask);
    savetask();
    console.log(newtask);
-    input="";
+   Inputarea.value="";
 })
 
 function rendertasks(task){
@@ -47,6 +48,14 @@ if(event.target.classList.contains("deletebutton")){
 task.completed = ! task.completed
 li.classList.toggle('completed');
 })
+
+li.querySelector(".deletebutton").addEventListener('click', function(){
+    TaskList= TaskList.filter(t => t.id !== task.id)
+
+    li.remove();
+    savetask();
+})
+
 }
 
 function savetask(){
